@@ -26,11 +26,10 @@ const Carousel = (props) => {
             {slides.map((index) => (
               <div className="embla__slide" key={index}>
                 <div className="relative">
-                  <img
+                  <LazyLoadImage
                     className="embla__slide__img brightness-[.3]"
                     src={imageByIndex(index)}
                     alt={"slide" + index}
-                    loading="lazy"
                   />
                   <Caption index={index} />
                 </div>
