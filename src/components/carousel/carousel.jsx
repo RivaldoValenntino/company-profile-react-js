@@ -3,6 +3,7 @@ import Autoplay from "embla-carousel-autoplay";
 import imageByIndex from "../../js/imageByIndex";
 import "../../styles/carousel.css";
 import Caption from "./intro";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const Carousel = (props) => {
   const { slides } = props;
   const emblaOptions = {
@@ -25,8 +26,8 @@ const Carousel = (props) => {
             {slides.map((index) => (
               <div className="embla__slide" key={index}>
                 <div className="relative">
-                  <img
-                    className="embla__slide__img brightness-[.3]"
+                  <LazyLoadImage
+                    className="embla__slide__img brightness-[.3] lg:w-full lg:h-[100vh] h-full"
                     src={imageByIndex(index)}
                     alt={"slide" + index}
                   />
