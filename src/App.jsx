@@ -17,7 +17,7 @@ const App = () => {
           <AboutPage />
           <ServicesPage />
           <PortfolioPage />
-          <Footer/>
+          <Footer />
         </section>
       </main>
     </>

@@ -54,7 +54,7 @@ const Header = () => {
           </div>
 
           <div
-            className={`link absolute flex px-2 flex-col right-4 top-14 w-full bg-white max-w-[200px] py-2 shadow-lg rounded-lg text-black border-rose-500 ${
+            className={`link absolute flex px-2 flex-col right-4 top-14 w-full bg-gray-100 max-w-[200px] py-2 shadow-2xl rounded-lg text-black border-rose-500 ${
               mobileMenuOpen ? "block" : "hidden"
             } lg:static lg:block lg:max-w-full lg:shadow-none lg:rounded-none lg:bg-transparent lg:text-black`}
           >

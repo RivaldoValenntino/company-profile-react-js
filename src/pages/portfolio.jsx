@@ -1,7 +1,7 @@
 import React from "react";
-import work1 from "../images/work-1.jpg";
-import work2 from "../images/work-2.jpeg";
-import work3 from "../images/work-3.png";
+import work1 from "../images/work-1.webp";
+import work2 from "../images/work-2.webp";
+import work3 from "../images/work-3.webp";
 import PortfolioHeader from "../components/portfolio/portfolioHeader";
 import WorkItem from "../components/portfolio/workItem";
 

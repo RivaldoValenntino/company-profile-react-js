@@ -1,6 +1,6 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import Image1 from '../../images/img-1.jpg';
+import Image1 from "../../images/img-1.webp";
 const AboutImage = () => {
     return (
       <>
