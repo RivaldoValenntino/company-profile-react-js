@@ -27,7 +27,7 @@ const Carousel = (props) => {
               <div className="embla__slide" key={index}>
                 <div className="relative">
                   <LazyLoadImage
-                    className="embla__slide__img brightness-[.3] lg:w-full lg:h-[100vh] h-full"
+                    className="embla__slide__img brightness-[.3]"
                     src={imageByIndex(index)}
                     alt={"slide" + index}
                   />
