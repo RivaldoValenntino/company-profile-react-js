@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import "../styles/header.css";
 
 const Header = () => {
@@ -10,6 +10,7 @@ const Header = () => {
   };
 
   useEffect(() => {
+    console.log(mobileMenuOpen);
     const handleScrolling = () => {
       if (window.scrollY > 1) {
         setScrolling(true);
@@ -34,17 +35,16 @@ const Header = () => {
 
   const navbarClass = scrolling
     ? "bg-[#f5f5f5] bg-opacity-50 backdrop-blur-2xl shadow-md fixed w-full top-0 z-[999]"
-    : "bg-transparent fixed w-full top-0 z-[999]";
-
+    : "bg-white fixed w-full top-0 z-[999]";
   return (
     <>
       <nav className={navbarClass}>
-        <div className="container flex justify-between items-center">
-          <h1 className="logo text-black px-10 py-2 text-2xl font-bold">
+        <div className="container flex items-center justify-between">
+          <h1 className="px-10 py-2 text-2xl font-bold text-black logo">
             Ree<span className="text-rose-500">ves</span>
           </h1>
 
-          <div className="absolute right-5 text-3xl lg:hidden">
+          <div className="absolute text-md right-5 lg:hidden">
             <i
               className={`bi bi-${
                 mobileMenuOpen ? "x-lg" : "list"
@@ -58,19 +58,19 @@ const Header = () => {
               mobileMenuOpen ? "block" : "hidden"
             } lg:static lg:block lg:max-w-full lg:shadow-none lg:rounded-none lg:bg-transparent lg:text-black`}
           >
-            <ul className="lg:flex lg:justify-center lg:font-normal font-semibold font-montserrat">
+            <ul className="font-semibold lg:flex lg:justify-center lg:font-normal font-montserrat">
               <li>
-                <a href="" className="mx-5 py-3 flex lg:text-xl">
-                  <i className="bi bi-house mr-3 text-xl lg:hidden"></i>Home
+                <a href="" className="flex py-3 mx-5 lg:text-md">
+                  <i className="mr-3 text-md bi bi-house lg:hidden"></i>Home
                 </a>
               </li>
               <li>
                 <a
                   href="#about"
                   onClick={(e) => handleNavLinkClick(e, "about")}
-                  className="mx-5 py-3 flex lg:text-xl"
+                  className="flex py-3 mx-5 lg:text-md "
                 >
-                  <i className="bi bi-info-circle mr-3 text-xl lg:hidden"></i>
+                  <i className="mr-3 text-md bi bi-info-circle lg:hidden"></i>
                   About
                 </a>
               </li>
@@ -78,35 +78,29 @@ const Header = () => {
                 <a
                   href="#services"
                   onClick={(e) => handleNavLinkClick(e, "services")}
-                  className="mx-5 py-3 flex lg:text-xl"
+                  className="flex py-3 mx-5 lg:text-md"
                 >
-                  <i className="bi bi-grid mr-3 text-xl lg:hidden"></i>Services
+                  <i className="mr-3 text-md bi bi-grid lg:hidden"></i>Services
                 </a>
               </li>
               <li>
                 <a
                   href="#portfolio"
                   onClick={(e) => handleNavLinkClick(e, "portfolio")}
-                  className="mx-5 py-3 flex lg:text-xl"
+                  className="flex py-3 mx-5 lg:text-md"
                 >
-                  <i className="bi bi-people mr-3 text-xl lg:hidden"></i>
+                  <i className="mr-3 text-md bi bi-people lg:hidden"></i>
                   Portfolio
                 </a>
               </li>
               <li className="lg:hidden">
-                <a href="" className="mx-5 py-3 flex lg:text-xl text-md">
-                  <i className="bi bi-envelope mr-3 text-xl lg:hidden"></i>
+                <a href="" className="flex py-3 mx-5 lg:text-md text-md">
+                  <i className="mr-3 text-md bi bi-envelope lg:hidden"></i>
                   Contact Us
                 </a>
               </li>
             </ul>
           </div>
-          <button className="lg:flex w-[150px] mr-8 hidden border border-black text-black mt-2">
-            <a href="" className="px-7 py-2">
-              <span>Contact</span>
-              <i className="bi bi-envelope"></i>
-            </a>
-          </button>
         </div>
       </nav>
     </>

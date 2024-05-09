@@ -2,8 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
-    @apply bg-white h-full font-montserrat font-bold overflow-x-hidden
+  @apply h-full overflow-x-hidden font-bold bg-white font-montserrat;
 }
 
+.banners::after {
+  content: "";
+  display: block;
+  width: 100dvw;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.2)
+  );
+  position: absolute;
+  bottom: 0;
+}
